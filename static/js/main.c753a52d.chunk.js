@@ -21,8 +21,7 @@
 					resumeLink:
 						"https://drive.google.com/file/d/1irmpBI67y_QS3DelabcsdxUI4PTLvo_p/view?usp=sharing",
 					fbUrl: "https://www.facebook.com/kpranjal2047",
-					gmailUrl:
-						"https://mail.google.com/mail/?view=cm&fs=1&to=kpranjal2047@gmail.com",
+					gmailUrl: "mailto:kpranjal2047@gmail.com",
 					linkedInUrl: "https://www.linkedin.com/in/kpranjal2047/",
 					organisation: "Bits Pilani Hyderabad Campus",
 					coverDesc: "Enter your description here. ",
