@@ -30,8 +30,26 @@
 					orgLink: "https://www.bits-pilani.ac.in/",
 					updates: [
 						{
-							desc: "Enter ext to show here to the visitors",
-							link: "enter the link of the project here",
+							desc:
+								"Checkout the cab booking simulator which simulates cab booking and ongoing rides",
+							link: "https://github.com/kpranjal2047/Cab-Booking",
+						},
+						{
+							desc:
+								"Normalizer - A Database Utility application which helps in normalizing the database",
+							link: "https://github.com/kpranjal2047/Normalizer",
+						},
+						{
+							desc:
+								"Java application which simulates the process of extendible hashing used in database systems",
+							link:
+								"https://github.com/kpranjal2047/Extendible-Hashing",
+						},
+						{
+							desc:
+								"Student Record System - A Java Application to store and manage student details of a school",
+							link:
+								"https://github.com/kpranjal2047/Student-Record",
 						},
 					],
 				},
