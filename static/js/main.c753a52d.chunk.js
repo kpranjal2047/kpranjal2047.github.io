@@ -24,10 +24,15 @@
 					gmailUrl: "mailto:kpranjal2047@gmail.com",
 					linkedInUrl: "https://www.linkedin.com/in/kpranjal2047/",
 					organisation: "Bits Pilani Hyderabad Campus",
-					coverDesc: "Enter your description here. ",
+					coverDesc: "Hello everyone... I am a final year student at BITS Pilani Hyderabad Campus who loves to create new things. My interests include programming, playing games and sleeping xD",
 					githubUserName: "kpranjal2047",
 					orgLink: "https://www.bits-pilani.ac.in/",
 					updates: [
+						{
+							desc:
+								"Get updates about available vaccination slots in any area through this GUI application",
+							link: "https://github.com/kpranjal2047/Cowin-Status-Tracker-GUI",
+						},
 						{
 							desc:
 								"Checkout the cab booking simulator which simulates cab booking and ongoing rides",
