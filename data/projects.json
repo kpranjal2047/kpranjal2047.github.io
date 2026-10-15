@@ -1,0 +1,318 @@
+{
+  "profile": {
+    "name": "Kumar Pranjal",
+    "username": "kpranjal2047",
+    "role": "Senior Software Engineer",
+    "company": "Oracle",
+    "email": "kpranjal2047@gmail.com",
+    "roleSource": "Provided directly by the owner on 2026-10-15"
+  },
+  "scannedOn": "2026-10-15",
+  "repositorySource": "https://github.com/kpranjal2047?tab=repositories",
+  "scope": "All 19 publicly listed repositories. Repository landing pages, README content when available, and selected supporting source/documents were reviewed. Private repositories are not included.",
+  "projects": [
+    {
+      "slug": "Android-Live-Progress",
+      "title": "Live Progress",
+      "category": "Android",
+      "language": "Kotlin",
+      "updated": "2026-10-14",
+      "kind": "Personal project",
+      "summary": "Native live updates for Android 16 and newer.",
+      "details": "Turns supported progress, media, ride, delivery, and train notifications into live updates across the status bar, lock screen, and always-on display. Preserves original notifications and provides per-category controls.",
+      "technologies": [
+        "Android 16+",
+        "Kotlin",
+        "Media sessions",
+        "Notification APIs"
+      ],
+      "url": "https://github.com/kpranjal2047/Android-Live-Progress"
+    },
+    {
+      "slug": "coursera-downloader",
+      "title": "Coursera Downloader",
+      "category": "Tools",
+      "language": "Python",
+      "updated": "2023-06-25",
+      "kind": "Fork",
+      "summary": "A fork of the coursera-dl course resource downloader.",
+      "details": "Downloads and organizes accessible Coursera course materials. Forked from coursera-dl/coursera-dl; the upstream project and its authors provide the original implementation.",
+      "technologies": [
+        "Python",
+        "CLI",
+        "Upstream fork"
+      ],
+      "url": "https://github.com/kpranjal2047/coursera-downloader"
+    },
+    {
+      "slug": "Cowin-Status-Tracker-GUI",
+      "title": "CoWIN Status Tracker GUI",
+      "category": "Applications",
+      "language": "Java",
+      "updated": "2023-06-02",
+      "kind": "Personal project",
+      "summary": "A JavaFX desktop application for vaccination slot updates.",
+      "details": "Searches by PIN code or district, shows toast notifications when slots are available, and supports downloading vaccination certificates. The README specifies JDK 17 and Gradle.",
+      "technologies": [
+        "JavaFX",
+        "Java 17",
+        "Gradle"
+      ],
+      "url": "https://github.com/kpranjal2047/Cowin-Status-Tracker-GUI"
+    },
+    {
+      "slug": "AER-Ad-Bot",
+      "title": "AER Ad Bot",
+      "category": "Tools",
+      "language": "Python",
+      "updated": "2022-02-20",
+      "kind": "Personal project",
+      "summary": "A Python Discord bot for automated messages.",
+      "details": "Uses the Discord client and asynchronous task loops, with text and image resources for composing messages. The repository includes a Procfile and Python dependency list.",
+      "technologies": [
+        "Python",
+        "Discord",
+        "Async tasks"
+      ],
+      "url": "https://github.com/kpranjal2047/AER-Ad-Bot"
+    },
+    {
+      "slug": "RL-Project",
+      "title": "Deep RL Recommender",
+      "category": "Machine learning",
+      "language": "Jupyter Notebook",
+      "updated": "2021-12-01",
+      "kind": "Collaborative coursework",
+      "summary": "A recommendation system using deep reinforcement learning.",
+      "details": "A collaborative implementation prepared for the CS F317 Reinforcement Learning course. The implementation is provided as a Jupyter notebook.",
+      "technologies": [
+        "Reinforcement learning",
+        "Recommendations",
+        "Jupyter"
+      ],
+      "url": "https://github.com/kpranjal2047/RL-Project"
+    },
+    {
+      "slug": "kpranjal2047.github.io",
+      "title": "Personal Website",
+      "category": "Web",
+      "language": "JavaScript",
+      "updated": "2021-11-14",
+      "kind": "Personal project",
+      "summary": "The GitHub Pages repository behind this website.",
+      "details": "The scanned public repository contains a compiled JavaScript portfolio. This local rebuild replaces that page with a repository-driven portfolio.",
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "url": "https://github.com/kpranjal2047/kpranjal2047.github.io"
+    },
+    {
+      "slug": "Cowin-Status-Tracker",
+      "title": "CoWIN Status Tracker CLI",
+      "category": "Tools",
+      "language": "Python",
+      "updated": "2021-06-13",
+      "kind": "Personal project",
+      "summary": "Vaccination slot tracking from the command line.",
+      "details": "Searches by district or PIN code with age, dose, and vaccine filters. Polls every 60 seconds, shows desktop notifications, and offers optional SMS alerts through Twilio.",
+      "technologies": [
+        "Python",
+        "Twilio",
+        "CLI"
+      ],
+      "url": "https://github.com/kpranjal2047/Cowin-Status-Tracker"
+    },
+    {
+      "slug": "ML-Assignment",
+      "title": "Machine Learning Assignments",
+      "category": "Machine learning",
+      "language": "Jupyter Notebook",
+      "updated": "2021-04-26",
+      "kind": "Coursework",
+      "summary": "Machine learning coursework organized into two assignments.",
+      "details": "Contains Assignment 1 and Assignment 2 directories. The repository has no project README, so specific model claims are intentionally omitted.",
+      "technologies": [
+        "Jupyter",
+        "Machine learning"
+      ],
+      "url": "https://github.com/kpranjal2047/ML-Assignment"
+    },
+    {
+      "slug": "Deep-Learning-Assignment",
+      "title": "Deep Learning Assignments",
+      "category": "Machine learning",
+      "language": "Python",
+      "updated": "2021-04-26",
+      "kind": "Coursework",
+      "summary": "Deep learning coursework, including MNIST detection models.",
+      "details": "Contains an Assignment 2 directory and an MNIST Detection Models directory. These are learning implementations rather than a deployed application.",
+      "technologies": [
+        "Python",
+        "Deep learning",
+        "MNIST"
+      ],
+      "url": "https://github.com/kpranjal2047/Deep-Learning-Assignment"
+    },
+    {
+      "slug": "Data-Mining-Assignment",
+      "title": "Data Mining Assignments",
+      "category": "Machine learning",
+      "language": "Python",
+      "updated": "2021-04-26",
+      "kind": "Coursework",
+      "summary": "Python data mining coursework in two assignment collections.",
+      "details": "Contains Assignment 1 and Assignment 2 directories. No README is available on the repository landing page.",
+      "technologies": [
+        "Python",
+        "Data mining"
+      ],
+      "url": "https://github.com/kpranjal2047/Data-Mining-Assignment"
+    },
+    {
+      "slug": "Cryptography-Assignment",
+      "title": "Cryptography Assignments",
+      "category": "Tools",
+      "language": "Python",
+      "updated": "2021-04-17",
+      "kind": "Coursework",
+      "summary": "Python cryptography coursework in two assignment collections.",
+      "details": "Contains Assignment 1 and Assignment 2 directories. Specific algorithms are not described on the repository landing page.",
+      "technologies": [
+        "Python",
+        "Cryptography"
+      ],
+      "url": "https://github.com/kpranjal2047/Cryptography-Assignment"
+    },
+    {
+      "slug": "LSH-IR",
+      "title": "LSH Document Retrieval",
+      "category": "Machine learning",
+      "language": "Python",
+      "updated": "2020-11-23",
+      "kind": "Collaborative coursework",
+      "summary": "Find similar documents with locality-sensitive hashing.",
+      "details": "Accepts a shingle length, query document ID, and Jaccard similarity threshold, then ranks similar documents from the corpus. The README credits a four-person project team.",
+      "technologies": [
+        "Python",
+        "LSH",
+        "Jaccard similarity"
+      ],
+      "url": "https://github.com/kpranjal2047/LSH-IR"
+    },
+    {
+      "slug": "Recommender-Systems",
+      "title": "Movie Recommender Systems",
+      "category": "Machine learning",
+      "language": "Python",
+      "updated": "2020-11-23",
+      "kind": "Collaborative coursework",
+      "summary": "Three approaches to movie recommendations on MovieLens.",
+      "details": "A collaborative CS F469 project comparing collaborative filtering, singular value decomposition (SVD), and CUR decomposition on the MovieLens dataset. Uses NumPy and Pandas.",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "SVD / CUR"
+      ],
+      "url": "https://github.com/kpranjal2047/Recommender-Systems"
+    },
+    {
+      "slug": "FODS-Assignment",
+      "title": "FODS Assignments",
+      "category": "Machine learning",
+      "language": "Jupyter Notebook",
+      "updated": "2020-11-21",
+      "kind": "Coursework",
+      "summary": "A collection of notebook-based FODS assignments.",
+      "details": "Organized into A1, A2, and A3 directories. The public description identifies the repository as FODS Assignment.",
+      "technologies": [
+        "Jupyter",
+        "Coursework"
+      ],
+      "url": "https://github.com/kpranjal2047/FODS-Assignment"
+    },
+    {
+      "slug": "Student-Record",
+      "title": "Student Record System",
+      "category": "Applications",
+      "language": "Java",
+      "updated": "2020-08-11",
+      "kind": "Personal project",
+      "summary": "Store and retrieve school student data in a desktop app.",
+      "details": "A Java Swing application connected to a school database, organized under the StudentRecord directory.",
+      "technologies": [
+        "Java",
+        "Swing",
+        "Databases"
+      ],
+      "url": "https://github.com/kpranjal2047/Student-Record"
+    },
+    {
+      "slug": "Cab-Booking",
+      "title": "Cab Booking Simulator",
+      "category": "Applications",
+      "language": "Java",
+      "updated": "2020-08-11",
+      "kind": "Personal project",
+      "summary": "Simulate booking a cab and following an ongoing ride.",
+      "details": "A Java Swing desktop simulation of the cab booking process and the ride in progress. The project lives in the CabBooking directory.",
+      "technologies": [
+        "Java",
+        "Swing",
+        "Simulation"
+      ],
+      "url": "https://github.com/kpranjal2047/Cab-Booking"
+    },
+    {
+      "slug": "Normalizer-2",
+      "title": "Normalizer 2",
+      "category": "Databases",
+      "language": "Java",
+      "updated": "2020-05-13",
+      "kind": "Personal project",
+      "summary": "A second Java database normalization project.",
+      "details": "A separate repository for database normalization using Java. The public repository does not document the differences from Normalizer.",
+      "technologies": [
+        "Java",
+        "Normalization",
+        "Databases"
+      ],
+      "url": "https://github.com/kpranjal2047/Normalizer-2"
+    },
+    {
+      "slug": "Normalizer",
+      "title": "Normalizer",
+      "category": "Databases",
+      "language": "Java",
+      "updated": "2020-05-13",
+      "kind": "Personal project",
+      "summary": "A Java utility for relational database normalization.",
+      "details": "Explores database normalization in Java. Repository topics include database management and normalization.",
+      "technologies": [
+        "Java",
+        "Normalization",
+        "Databases"
+      ],
+      "url": "https://github.com/kpranjal2047/Normalizer"
+    },
+    {
+      "slug": "Extendible-Hashing",
+      "title": "Extendible Hashing",
+      "category": "Databases",
+      "language": "Java",
+      "updated": "2020-05-13",
+      "kind": "Personal project",
+      "summary": "Simulate extendible hashing in Java.",
+      "details": "A database data-structure simulation, provided in the Extendible Hashing project directory.",
+      "technologies": [
+        "Java",
+        "Hashing",
+        "Simulation"
+      ],
+      "url": "https://github.com/kpranjal2047/Extendible-Hashing"
+    }
+  ]
+}

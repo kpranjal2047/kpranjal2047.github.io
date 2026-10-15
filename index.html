@@ -1,195 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<meta
-			name="description"
-			content="Web site created using create-react-app"
-		/>
-		<link rel="apple-touch-icon" href="/logo192.png" />
-		<link rel="manifest" href="/manifest.json" />
-		<title>Kumar Pranjal</title>
-		<link href="/static/css/2.43b2b750.chunk.css" rel="stylesheet" />
-		<link href="/static/css/main.636aa68d.chunk.css" rel="stylesheet" />
-	</head>
-
-	<body>
-		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<div id="root"></div>
-		<script>
-			!(function (e) {
-				function t(t) {
-					for (
-						var n, i, a = t[0], c = t[1], l = t[2], s = 0, p = [];
-						s < a.length;
-						s++
-					)
-						(i = a[s]),
-							Object.prototype.hasOwnProperty.call(o, i) &&
-								o[i] &&
-								p.push(o[i][0]),
-							(o[i] = 0);
-					for (n in c)
-						Object.prototype.hasOwnProperty.call(c, n) &&
-							(e[n] = c[n]);
-					for (f && f(t); p.length; ) p.shift()();
-					return u.push.apply(u, l || []), r();
-				}
-				function r() {
-					for (var e, t = 0; t < u.length; t++) {
-						for (var r = u[t], n = !0, a = 1; a < r.length; a++) {
-							var c = r[a];
-							0 !== o[c] && (n = !1);
-						}
-						n && (u.splice(t--, 1), (e = i((i.s = r[0]))));
-					}
-					return e;
-				}
-				var n = {},
-					o = { 1: 0 },
-					u = [];
-				function i(t) {
-					if (n[t]) return n[t].exports;
-					var r = (n[t] = { i: t, l: !1, exports: {} });
-					return (
-						e[t].call(r.exports, r, r.exports, i),
-						(r.l = !0),
-						r.exports
-					);
-				}
-				(i.e = function (e) {
-					var t = [],
-						r = o[e];
-					if (0 !== r)
-						if (r) t.push(r[2]);
-						else {
-							var n = new Promise(function (t, n) {
-								r = o[e] = [t, n];
-							});
-							t.push((r[2] = n));
-							var u,
-								a = document.createElement("script");
-							(a.charset = "utf-8"),
-								(a.timeout = 120),
-								i.nc && a.setAttribute("nonce", i.nc),
-								(a.src = (function (e) {
-									return (
-										i.p +
-										"static/js/" +
-										({}[e] || e) +
-										"." +
-										{ 3: "c89b5e66" }[e] +
-										".chunk.js"
-									);
-								})(e));
-							var c = new Error();
-							u = function (t) {
-								(a.onerror = a.onload = null), clearTimeout(l);
-								var r = o[e];
-								if (0 !== r) {
-									if (r) {
-										var n =
-												t &&
-												("load" === t.type
-													? "missing"
-													: t.type),
-											u = t && t.target && t.target.src;
-										(c.message =
-											"Loading chunk " +
-											e +
-											" failed.\n(" +
-											n +
-											": " +
-											u +
-											")"),
-											(c.name = "ChunkLoadError"),
-											(c.type = n),
-											(c.request = u),
-											r[1](c);
-									}
-									o[e] = void 0;
-								}
-							};
-							var l = setTimeout(function () {
-								u({ type: "timeout", target: a });
-							}, 12e4);
-							(a.onerror = a.onload = u),
-								document.head.appendChild(a);
-						}
-					return Promise.all(t);
-				}),
-					(i.m = e),
-					(i.c = n),
-					(i.d = function (e, t, r) {
-						i.o(e, t) ||
-							Object.defineProperty(e, t, {
-								enumerable: !0,
-								get: r,
-							});
-					}),
-					(i.r = function (e) {
-						"undefined" != typeof Symbol &&
-							Symbol.toStringTag &&
-							Object.defineProperty(e, Symbol.toStringTag, {
-								value: "Module",
-							}),
-							Object.defineProperty(e, "__esModule", {
-								value: !0,
-							});
-					}),
-					(i.t = function (e, t) {
-						if ((1 & t && (e = i(e)), 8 & t)) return e;
-						if (4 & t && "object" == typeof e && e && e.__esModule)
-							return e;
-						var r = Object.create(null);
-						if (
-							(i.r(r),
-							Object.defineProperty(r, "default", {
-								enumerable: !0,
-								value: e,
-							}),
-							2 & t && "string" != typeof e)
-						)
-							for (var n in e)
-								i.d(
-									r,
-									n,
-									function (t) {
-										return e[t];
-									}.bind(null, n)
-								);
-						return r;
-					}),
-					(i.n = function (e) {
-						var t =
-							e && e.__esModule
-								? function () {
-										return e.default;
-								  }
-								: function () {
-										return e;
-								  };
-						return i.d(t, "a", t), t;
-					}),
-					(i.o = function (e, t) {
-						return Object.prototype.hasOwnProperty.call(e, t);
-					}),
-					(i.p = "/"),
-					(i.oe = function (e) {
-						throw (console.error(e), e);
-					});
-				var a = (this.webpackJsonpgitio = this.webpackJsonpgitio || []),
-					c = a.push.bind(a);
-				(a.push = t), (a = a.slice());
-				for (var l = 0; l < a.length; l++) t(a[l]);
-				var f = c;
-				r();
-			})([]);
-		</script>
-		<script src="/static/js/2.4c1435c9.chunk.js"></script>
-		<script src="/static/js/main.c753a52d.chunk.js"></script>
-	</body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Kumar Pranjal, Senior Software Engineer at Oracle. Explore Android Live Progress, Java applications, Python tools, and machine learning projects from 19 public GitHub repositories.">
+  <title>Kumar Pranjal — Software Engineer</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="#top" aria-label="Kumar Pranjal home"><span class="brand-symbol" aria-hidden="true">✳</span> pranjal<span class="wordmark-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#archive">Repository archive</a><a href="#about">About</a></nav>
+    <a class="header-contact" href="mailto:kpranjal2047@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="introduction">
+      <div class="eyebrow"><span class="dot"></span> KUMAR PRANJAL <span class="eyebrow-separator">/</span> SOFTWARE ENGINEER</div>
+      <div class="hero-grid">
+        <div class="hero-copy"><h1>Software,<br>built with <em>intent.</em></h1><p class="hero-intro">Senior Software Engineer at <strong>Oracle.</strong><br>Exploring the space between everyday applications,<br class="desktop-only"> Android systems, and machine learning.</p><div class="hero-actions"><a class="button dark" href="#projects">Explore the projects <span aria-hidden="true">↘</span></a><a class="quiet-link" href="https://github.com/kpranjal2047" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a></div></div>
+        <aside class="profile-card" aria-label="Profile overview"><div class="profile-top"><span class="mono">THE PERSON BEHIND THE CODE</span><span aria-hidden="true">↗</span></div><div class="profile-monogram" aria-hidden="true">kp<span>_</span><div class="monogram-grid"></div></div><div class="profile-name"><h2>Kumar Pranjal</h2><span class="mono">@kpranjal2047</span></div><div class="profile-role"><span class="dot"></span> Senior Software Engineer · Oracle</div><div class="profile-bottom"><span>Android. Applications. Algorithms.</span><span aria-hidden="true">{ }</span></div></aside>
+      </div>
+      <div class="hero-footer"><span class="mono">A COLLECTION OF WORK, EXPERIMENTS & IDEAS</span><a class="mono" href="#latest">START EXPLORING <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <div class="snapshot-band"><div class="shell snapshot"><div><strong>19</strong><span>public repositories</span></div><div><strong>03</strong><span>core languages · Kotlin, Java, Python</span></div><div><strong>01</strong><span>approach · learn by building</span></div><a href="#archive" aria-label="Browse all 19 repositories"><span aria-hidden="true">↗</span></a></div></div>
+    <section class="latest shell section-space" id="latest">
+      <div class="section-label"><span class="mono">01 / IN FOCUS</span><span class="mono">LATEST PUBLIC PROJECT</span></div>
+      <div class="latest-layout">
+        <div class="latest-copy"><span class="badge"><span class="dot"></span> ANDROID 16+</span><h2>Less checking.<br>More <em>knowing.</em></h2><h3>Live Progress</h3><p>An Android companion that brings progress, media, and selected app notifications to the places you actually glance at.</p><p>From downloads to a ride home, see live updates in the status bar, on the lock screen, and on the always-on display.</p><div class="tag-list"><span>Kotlin</span><span>Notification APIs</span><span>Media sessions</span></div><a class="button dark" href="https://github.com/kpranjal2047/Android-Live-Progress" target="_blank" rel="noopener noreferrer">Explore Live Progress <span aria-hidden="true">↗</span></a><a class="documentation-link" href="https://github.com/kpranjal2047/Android-Live-Progress/blob/main/decisions.md" target="_blank" rel="noopener noreferrer">Read the engineering decisions <span aria-hidden="true">↗</span></a></div>
+        <div class="live-demo"><div class="demo-header"><span class="mono"><span class="dot"></span> LIVE PROGRESS</span><span class="mono">A GLANCE IS ENOUGH.</span></div><div class="phone"><div class="phone-camera" aria-hidden="true"></div><div class="phone-status"><span>9:41</span><span class="status-pill" id="demo-pill">↓ 68%</span><span aria-hidden="true">▮▮▮ ▰</span></div><div class="phone-date">Thursday, October 15</div><div class="phone-time" aria-hidden="true">09<span>:</span>41</div><div class="phone-note">Everything you need. Right here.</div><div class="notification" aria-live="polite" aria-atomic="true"><div class="notification-app"><span class="notification-icon" id="demo-icon" aria-hidden="true">↓</span><span id="demo-source">Download manager</span><span>now</span></div><h4 id="demo-title">Almost there.</h4><p id="demo-description">Your download is making progress.</p><div class="progress-track"><div id="demo-progress"></div></div><div class="notification-meta"><span id="demo-detail">680 MB of 1 GB</span><span id="demo-value">68%</span></div></div><div class="phone-foot" aria-hidden="true"><span>⌕</span><span class="unlock-line"></span><span>◎</span></div></div><div class="demo-controls" role="group" aria-label="Choose notification preview"><button type="button" data-demo="progress" class="selected" aria-pressed="true">↓ Progress</button><button type="button" data-demo="media" aria-pressed="false">♫ Media</button><button type="button" data-demo="travel" aria-pressed="false">↗ Travel</button></div><p class="demo-caption">INTERACTIVE CONCEPT · ILLUSTRATIVE DATA, NOT AN APP SCREENSHOT</p></div>
+      </div>
+      <div class="engineering-notes"><div><span class="note-number">01</span><div><h4>Real progress, no guesses</h4><p>Only genuine source progress becomes a percentage.</p></div></div><div><span class="note-number">02</span><div><h4>The source stays active</h4><p>Original notifications keep their update lifecycle.</p></div></div><div><span class="note-number">03</span><div><h4>On-device by design</h4><p>Works locally, without an internet connection or root.</p></div></div></div>
+    </section>
+    <section class="projects-section section-space" id="projects"><div class="shell"><div class="section-label"><span class="mono">02 / SELECTED PROJECTS</span><span class="mono">APPLICATIONS ↔ ALGORITHMS</span></div><div class="section-title"><h2>Different problems.<br><em>The same curiosity.</em></h2><p>A selection from the archive, spanning useful<br class="desktop-only"> desktop tools and collaborative algorithm projects.</p></div><div class="selected-grid">
+      <article class="selected-card"><div class="project-art cowin-art" aria-hidden="true"><div class="art-topline"><span>HEALTHCARE / DESKTOP</span><span>01</span></div><div class="slot-window"><div class="slot-title">CoWIN <span>slot tracker</span></div><div class="slot-query"><span>Search by district or PIN code</span><b>⌕</b></div><div class="slot-row"><i></i><span>Find available slots</span><span>↗</span></div><div class="slot-row"><i></i><span>Get notified</span><span>↗</span></div><div class="slot-row"><i></i><span>Download certificates</span><span>↗</span></div></div></div><div class="card-body"><span class="project-kicker mono">PERSONAL PROJECT · JAVA / JAVAFX</span><h3>CoWIN Status Tracker <span aria-hidden="true">↗</span></h3><p>A desktop interface for finding vaccination slots by district or PIN code, with toast notifications and certificate downloads.</p><div class="card-footer"><span>Java 17 · JavaFX · Gradle</span><a href="https://github.com/kpranjal2047/Cowin-Status-Tracker-GUI" target="_blank" rel="noopener noreferrer" aria-label="View CoWIN Status Tracker GUI source">View source ↗</a></div></div></article>
+      <article class="selected-card"><div class="project-art retrieval-art" aria-hidden="true"><div class="art-topline"><span>INFORMATION RETRIEVAL</span><span>02</span></div><div class="retrieval-diagram"><div class="query-node">query<br><strong>doc.</strong></div><div class="diagram-arrow">→<small>LSH</small></div><div class="document-matches"><span><b>01</b> Similar document <i>↗</i></span><span><b>02</b> Similar document <i>↗</i></span><span><b>03</b> Similar document <i>↗</i></span></div></div><span class="art-bottomline">SHINGLE → HASH → COMPARE → RANK</span></div><div class="card-body"><span class="project-kicker mono">COLLABORATIVE COURSEWORK · PYTHON</span><h3>LSH Document Retrieval <span aria-hidden="true">↗</span></h3><p>Finds documents similar to a query using locality-sensitive hashing, then ranks results by Jaccard similarity.</p><div class="card-footer"><span>Python · LSH · Text similarity</span><a href="https://github.com/kpranjal2047/LSH-IR" target="_blank" rel="noopener noreferrer" aria-label="View LSH Document Retrieval source">View source ↗</a></div></div></article>
+      <article class="selected-card"><div class="project-art recommender-art" aria-hidden="true"><div class="art-topline"><span>RECOMMENDATION SYSTEMS</span><span>03</span></div><div class="movie-display"><div class="movie-tile">A<br><span>01</span></div><div class="movie-tile">B<br><span>02</span></div><div class="movie-tile">C<br><span>03</span></div></div><div class="movie-caption">Different methods. Better matches.</div><span class="art-bottomline">COLLABORATIVE FILTERING / SVD / CUR</span></div><div class="card-body"><span class="project-kicker mono">COLLABORATIVE COURSEWORK · PYTHON</span><h3>Movie Recommender Systems <span aria-hidden="true">↗</span></h3><p>Explores three recommendation approaches on the MovieLens dataset: collaborative filtering, SVD, and CUR decomposition.</p><div class="card-footer"><span>NumPy · Pandas · MovieLens</span><a href="https://github.com/kpranjal2047/Recommender-Systems" target="_blank" rel="noopener noreferrer" aria-label="View Movie Recommender Systems source">View source ↗</a></div></div></article>
+      <article class="selected-card"><div class="project-art rl-art" aria-hidden="true"><div class="art-topline"><span>REINFORCEMENT LEARNING</span><span>04</span></div><div class="rl-diagram"><div>AGENT <span>→</span></div><div class="rl-loop">action <span>↻</span> reward</div><div>ENVIRONMENT <span>←</span></div></div><span class="art-bottomline">LEARN FROM THE FEEDBACK.</span></div><div class="card-body"><span class="project-kicker mono">COLLABORATIVE COURSEWORK · JUPYTER</span><h3>Deep RL Recommender <span aria-hidden="true">↗</span></h3><p>A notebook implementation of a recommendation system using deep reinforcement learning, developed for CS F317.</p><div class="card-footer"><span>Deep reinforcement learning</span><a href="https://github.com/kpranjal2047/RL-Project" target="_blank" rel="noopener noreferrer" aria-label="View Deep RL Recommender source">View source ↗</a></div></div></article>
+    </div><p class="artwork-note mono">PROJECT ILLUSTRATIONS ARE CONCEPTUAL. EXPLORE THE SOURCE FOR IMPLEMENTATIONS.</p></div></section>
+    <section class="archive shell section-space" id="archive"><div class="section-label"><span class="mono">03 / THE COMPLETE ARCHIVE</span><a class="mono" href="https://github.com/kpranjal2047?tab=repositories" target="_blank" rel="noopener noreferrer">OPEN GITHUB ↗</a></div><div class="section-title"><h2>Every repository.<br><em>One place to explore.</em></h2><p>All 19 public repositories, including coursework<br class="desktop-only"> and forks. Expand a row for the details.</p></div><div class="archive-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="project-search" placeholder="Search projects, languages, or topics…" aria-label="Search repositories"></label><label class="sort-box"><span>Sort by</span><select id="project-sort" aria-label="Sort repositories"><option value="recent">Recently updated</option><option value="name">Name A–Z</option></select></label></div><div class="archive-filters" role="group" aria-label="Filter repositories by category"><button type="button" data-filter="all" aria-pressed="true" class="selected">All <span>19</span></button><button type="button" data-filter="Android" aria-pressed="false">Android <span>1</span></button><button type="button" data-filter="Applications" aria-pressed="false">Applications <span>3</span></button><button type="button" data-filter="Machine learning" aria-pressed="false">Machine learning <span>7</span></button><button type="button" data-filter="Databases" aria-pressed="false">Databases <span>3</span></button><button type="button" data-filter="Tools" aria-pressed="false">Tools <span>4</span></button><button type="button" data-filter="Web" aria-pressed="false">Web <span>1</span></button></div><div class="archive-table-header mono"><span>REPOSITORY / DETAILS</span><span>LANGUAGE</span><span>UPDATED</span><span></span></div><div id="repository-list">
+<!-- REPOSITORIES:START -->
+  <details class="repo-row" data-category="Android" data-name="Live Progress" data-updated="2026-10-14" data-search="live progress android-live-progress native live updates for android 16 and newer. android kotlin personal project android 16+ kotlin media sessions notification apis">
+    <summary><span class="repo-main"><span class="repo-number">01</span><span><span class="repo-name">Live Progress</span><span class="repo-summary">Native live updates for Android 16 and newer.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot kotlin"></i>Kotlin</span><time datetime="2026-10-14">Oct 2026</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Turns supported progress, media, ride, delivery, and train notifications into live updates across the status bar, lock screen, and always-on display. Preserves original notifications and provides per-category controls.</p><div class="repo-detail-footer"><div class="tag-list"><span>Android 16+</span><span>Kotlin</span><span>Media sessions</span><span>Notification APIs</span></div><a href="https://github.com/kpranjal2047/Android-Live-Progress" target="_blank" rel="noopener noreferrer">View Android-Live-Progress on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Tools" data-name="Coursera Downloader" data-updated="2023-06-25" data-search="coursera downloader coursera-downloader a fork of the coursera-dl course resource downloader. tools python fork python cli upstream fork">
+    <summary><span class="repo-main"><span class="repo-number">02</span><span><span class="repo-name">Coursera Downloader</span><span class="repo-summary">A fork of the coursera-dl course resource downloader.</span><span class="repo-kind">Fork</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2023-06-25">Jun 2023</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Downloads and organizes accessible Coursera course materials. Forked from coursera-dl/coursera-dl; the upstream project and its authors provide the original implementation.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>CLI</span><span>Upstream fork</span></div><a href="https://github.com/kpranjal2047/coursera-downloader" target="_blank" rel="noopener noreferrer">View coursera-downloader on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Applications" data-name="CoWIN Status Tracker GUI" data-updated="2023-06-02" data-search="cowin status tracker gui cowin-status-tracker-gui a javafx desktop application for vaccination slot updates. applications java personal project javafx java 17 gradle">
+    <summary><span class="repo-main"><span class="repo-number">03</span><span><span class="repo-name">CoWIN Status Tracker GUI</span><span class="repo-summary">A JavaFX desktop application for vaccination slot updates.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2023-06-02">Jun 2023</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Searches by PIN code or district, shows toast notifications when slots are available, and supports downloading vaccination certificates. The README specifies JDK 17 and Gradle.</p><div class="repo-detail-footer"><div class="tag-list"><span>JavaFX</span><span>Java 17</span><span>Gradle</span></div><a href="https://github.com/kpranjal2047/Cowin-Status-Tracker-GUI" target="_blank" rel="noopener noreferrer">View Cowin-Status-Tracker-GUI on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Tools" data-name="AER Ad Bot" data-updated="2022-02-20" data-search="aer ad bot aer-ad-bot a python discord bot for automated messages. tools python personal project python discord async tasks">
+    <summary><span class="repo-main"><span class="repo-number">04</span><span><span class="repo-name">AER Ad Bot</span><span class="repo-summary">A Python Discord bot for automated messages.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2022-02-20">Feb 2022</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Uses the Discord client and asynchronous task loops, with text and image resources for composing messages. The repository includes a Procfile and Python dependency list.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>Discord</span><span>Async tasks</span></div><a href="https://github.com/kpranjal2047/AER-Ad-Bot" target="_blank" rel="noopener noreferrer">View AER-Ad-Bot on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="Deep RL Recommender" data-updated="2021-12-01" data-search="deep rl recommender rl-project a recommendation system using deep reinforcement learning. machine learning jupyter notebook collaborative coursework reinforcement learning recommendations jupyter">
+    <summary><span class="repo-main"><span class="repo-number">05</span><span><span class="repo-name">Deep RL Recommender</span><span class="repo-summary">A recommendation system using deep reinforcement learning.</span><span class="repo-kind">Collaborative coursework</span></span></span><span class="repo-language"><i class="language-dot jupyter"></i>Jupyter Notebook</span><time datetime="2021-12-01">Dec 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A collaborative implementation prepared for the CS F317 Reinforcement Learning course. The implementation is provided as a Jupyter notebook.</p><div class="repo-detail-footer"><div class="tag-list"><span>Reinforcement learning</span><span>Recommendations</span><span>Jupyter</span></div><a href="https://github.com/kpranjal2047/RL-Project" target="_blank" rel="noopener noreferrer">View RL-Project on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Web" data-name="Personal Website" data-updated="2021-11-14" data-search="personal website kpranjal2047.github.io the github pages repository behind this website. web javascript personal project javascript html css github pages">
+    <summary><span class="repo-main"><span class="repo-number">06</span><span><span class="repo-name">Personal Website</span><span class="repo-summary">The GitHub Pages repository behind this website.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot javascript"></i>JavaScript</span><time datetime="2021-11-14">Nov 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>The scanned public repository contains a compiled JavaScript portfolio. This local rebuild replaces that page with a repository-driven portfolio.</p><div class="repo-detail-footer"><div class="tag-list"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div><a href="https://github.com/kpranjal2047/kpranjal2047.github.io" target="_blank" rel="noopener noreferrer">View kpranjal2047.github.io on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Tools" data-name="CoWIN Status Tracker CLI" data-updated="2021-06-13" data-search="cowin status tracker cli cowin-status-tracker vaccination slot tracking from the command line. tools python personal project python twilio cli">
+    <summary><span class="repo-main"><span class="repo-number">07</span><span><span class="repo-name">CoWIN Status Tracker CLI</span><span class="repo-summary">Vaccination slot tracking from the command line.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2021-06-13">Jun 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Searches by district or PIN code with age, dose, and vaccine filters. Polls every 60 seconds, shows desktop notifications, and offers optional SMS alerts through Twilio.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>Twilio</span><span>CLI</span></div><a href="https://github.com/kpranjal2047/Cowin-Status-Tracker" target="_blank" rel="noopener noreferrer">View Cowin-Status-Tracker on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="Machine Learning Assignments" data-updated="2021-04-26" data-search="machine learning assignments ml-assignment machine learning coursework organized into two assignments. machine learning jupyter notebook coursework jupyter machine learning">
+    <summary><span class="repo-main"><span class="repo-number">08</span><span><span class="repo-name">Machine Learning Assignments</span><span class="repo-summary">Machine learning coursework organized into two assignments.</span><span class="repo-kind">Coursework</span></span></span><span class="repo-language"><i class="language-dot jupyter"></i>Jupyter Notebook</span><time datetime="2021-04-26">Apr 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Contains Assignment 1 and Assignment 2 directories. The repository has no project README, so specific model claims are intentionally omitted.</p><div class="repo-detail-footer"><div class="tag-list"><span>Jupyter</span><span>Machine learning</span></div><a href="https://github.com/kpranjal2047/ML-Assignment" target="_blank" rel="noopener noreferrer">View ML-Assignment on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="Deep Learning Assignments" data-updated="2021-04-26" data-search="deep learning assignments deep-learning-assignment deep learning coursework, including mnist detection models. machine learning python coursework python deep learning mnist">
+    <summary><span class="repo-main"><span class="repo-number">09</span><span><span class="repo-name">Deep Learning Assignments</span><span class="repo-summary">Deep learning coursework, including MNIST detection models.</span><span class="repo-kind">Coursework</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2021-04-26">Apr 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Contains an Assignment 2 directory and an MNIST Detection Models directory. These are learning implementations rather than a deployed application.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>Deep learning</span><span>MNIST</span></div><a href="https://github.com/kpranjal2047/Deep-Learning-Assignment" target="_blank" rel="noopener noreferrer">View Deep-Learning-Assignment on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="Data Mining Assignments" data-updated="2021-04-26" data-search="data mining assignments data-mining-assignment python data mining coursework in two assignment collections. machine learning python coursework python data mining">
+    <summary><span class="repo-main"><span class="repo-number">10</span><span><span class="repo-name">Data Mining Assignments</span><span class="repo-summary">Python data mining coursework in two assignment collections.</span><span class="repo-kind">Coursework</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2021-04-26">Apr 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Contains Assignment 1 and Assignment 2 directories. No README is available on the repository landing page.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>Data mining</span></div><a href="https://github.com/kpranjal2047/Data-Mining-Assignment" target="_blank" rel="noopener noreferrer">View Data-Mining-Assignment on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Tools" data-name="Cryptography Assignments" data-updated="2021-04-17" data-search="cryptography assignments cryptography-assignment python cryptography coursework in two assignment collections. tools python coursework python cryptography">
+    <summary><span class="repo-main"><span class="repo-number">11</span><span><span class="repo-name">Cryptography Assignments</span><span class="repo-summary">Python cryptography coursework in two assignment collections.</span><span class="repo-kind">Coursework</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2021-04-17">Apr 2021</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Contains Assignment 1 and Assignment 2 directories. Specific algorithms are not described on the repository landing page.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>Cryptography</span></div><a href="https://github.com/kpranjal2047/Cryptography-Assignment" target="_blank" rel="noopener noreferrer">View Cryptography-Assignment on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="LSH Document Retrieval" data-updated="2020-11-23" data-search="lsh document retrieval lsh-ir find similar documents with locality-sensitive hashing. machine learning python collaborative coursework python lsh jaccard similarity">
+    <summary><span class="repo-main"><span class="repo-number">12</span><span><span class="repo-name">LSH Document Retrieval</span><span class="repo-summary">Find similar documents with locality-sensitive hashing.</span><span class="repo-kind">Collaborative coursework</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2020-11-23">Nov 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Accepts a shingle length, query document ID, and Jaccard similarity threshold, then ranks similar documents from the corpus. The README credits a four-person project team.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>LSH</span><span>Jaccard similarity</span></div><a href="https://github.com/kpranjal2047/LSH-IR" target="_blank" rel="noopener noreferrer">View LSH-IR on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="Movie Recommender Systems" data-updated="2020-11-23" data-search="movie recommender systems recommender-systems three approaches to movie recommendations on movielens. machine learning python collaborative coursework python numpy pandas svd / cur">
+    <summary><span class="repo-main"><span class="repo-number">13</span><span><span class="repo-name">Movie Recommender Systems</span><span class="repo-summary">Three approaches to movie recommendations on MovieLens.</span><span class="repo-kind">Collaborative coursework</span></span></span><span class="repo-language"><i class="language-dot python"></i>Python</span><time datetime="2020-11-23">Nov 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A collaborative CS F469 project comparing collaborative filtering, singular value decomposition (SVD), and CUR decomposition on the MovieLens dataset. Uses NumPy and Pandas.</p><div class="repo-detail-footer"><div class="tag-list"><span>Python</span><span>NumPy</span><span>Pandas</span><span>SVD / CUR</span></div><a href="https://github.com/kpranjal2047/Recommender-Systems" target="_blank" rel="noopener noreferrer">View Recommender-Systems on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Machine learning" data-name="FODS Assignments" data-updated="2020-11-21" data-search="fods assignments fods-assignment a collection of notebook-based fods assignments. machine learning jupyter notebook coursework jupyter coursework">
+    <summary><span class="repo-main"><span class="repo-number">14</span><span><span class="repo-name">FODS Assignments</span><span class="repo-summary">A collection of notebook-based FODS assignments.</span><span class="repo-kind">Coursework</span></span></span><span class="repo-language"><i class="language-dot jupyter"></i>Jupyter Notebook</span><time datetime="2020-11-21">Nov 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Organized into A1, A2, and A3 directories. The public description identifies the repository as FODS Assignment.</p><div class="repo-detail-footer"><div class="tag-list"><span>Jupyter</span><span>Coursework</span></div><a href="https://github.com/kpranjal2047/FODS-Assignment" target="_blank" rel="noopener noreferrer">View FODS-Assignment on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Applications" data-name="Student Record System" data-updated="2020-08-11" data-search="student record system student-record store and retrieve school student data in a desktop app. applications java personal project java swing databases">
+    <summary><span class="repo-main"><span class="repo-number">15</span><span><span class="repo-name">Student Record System</span><span class="repo-summary">Store and retrieve school student data in a desktop app.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2020-08-11">Aug 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A Java Swing application connected to a school database, organized under the StudentRecord directory.</p><div class="repo-detail-footer"><div class="tag-list"><span>Java</span><span>Swing</span><span>Databases</span></div><a href="https://github.com/kpranjal2047/Student-Record" target="_blank" rel="noopener noreferrer">View Student-Record on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Applications" data-name="Cab Booking Simulator" data-updated="2020-08-11" data-search="cab booking simulator cab-booking simulate booking a cab and following an ongoing ride. applications java personal project java swing simulation">
+    <summary><span class="repo-main"><span class="repo-number">16</span><span><span class="repo-name">Cab Booking Simulator</span><span class="repo-summary">Simulate booking a cab and following an ongoing ride.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2020-08-11">Aug 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A Java Swing desktop simulation of the cab booking process and the ride in progress. The project lives in the CabBooking directory.</p><div class="repo-detail-footer"><div class="tag-list"><span>Java</span><span>Swing</span><span>Simulation</span></div><a href="https://github.com/kpranjal2047/Cab-Booking" target="_blank" rel="noopener noreferrer">View Cab-Booking on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Databases" data-name="Normalizer 2" data-updated="2020-05-13" data-search="normalizer 2 normalizer-2 a second java database normalization project. databases java personal project java normalization databases">
+    <summary><span class="repo-main"><span class="repo-number">17</span><span><span class="repo-name">Normalizer 2</span><span class="repo-summary">A second Java database normalization project.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2020-05-13">May 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A separate repository for database normalization using Java. The public repository does not document the differences from Normalizer.</p><div class="repo-detail-footer"><div class="tag-list"><span>Java</span><span>Normalization</span><span>Databases</span></div><a href="https://github.com/kpranjal2047/Normalizer-2" target="_blank" rel="noopener noreferrer">View Normalizer-2 on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Databases" data-name="Normalizer" data-updated="2020-05-13" data-search="normalizer normalizer a java utility for relational database normalization. databases java personal project java normalization databases">
+    <summary><span class="repo-main"><span class="repo-number">18</span><span><span class="repo-name">Normalizer</span><span class="repo-summary">A Java utility for relational database normalization.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2020-05-13">May 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>Explores database normalization in Java. Repository topics include database management and normalization.</p><div class="repo-detail-footer"><div class="tag-list"><span>Java</span><span>Normalization</span><span>Databases</span></div><a href="https://github.com/kpranjal2047/Normalizer" target="_blank" rel="noopener noreferrer">View Normalizer on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+  <details class="repo-row" data-category="Databases" data-name="Extendible Hashing" data-updated="2020-05-13" data-search="extendible hashing extendible-hashing simulate extendible hashing in java. databases java personal project java hashing simulation">
+    <summary><span class="repo-main"><span class="repo-number">19</span><span><span class="repo-name">Extendible Hashing</span><span class="repo-summary">Simulate extendible hashing in Java.</span><span class="repo-kind">Personal project</span></span></span><span class="repo-language"><i class="language-dot java"></i>Java</span><time datetime="2020-05-13">May 2020</time><span class="expand-icon" aria-hidden="true">+</span></summary>
+    <div class="repo-details"><p>A database data-structure simulation, provided in the Extendible Hashing project directory.</p><div class="repo-detail-footer"><div class="tag-list"><span>Java</span><span>Hashing</span><span>Simulation</span></div><a href="https://github.com/kpranjal2047/Extendible-Hashing" target="_blank" rel="noopener noreferrer">View Extendible-Hashing on GitHub <span aria-hidden="true">↗</span></a></div></div>
+  </details>
+<!-- REPOSITORIES:END -->
+</div><div class="empty-state" id="empty-state" hidden><h3>No repositories match.</h3><p>Try a different keyword or explore the full archive.</p><button type="button" class="button dark" id="reset-filters">Reset search & filters <span aria-hidden="true">↺</span></button></div><div class="archive-bottom"><span id="result-count" role="status">Showing 19 of 19 repositories</span><span>Public GitHub snapshot · 15 October 2026</span></div><noscript><p>All repositories are listed above. Search, filtering, and the notification demo require JavaScript.</p></noscript></section>
+    <section class="about-section" id="about"><div class="shell about-layout"><div><span class="mono">04 / ABOUT</span><h2>Engineer by profession.<br><em>Builder by habit.</em></h2></div><div class="about-text"><p class="about-lead">I’m Kumar Pranjal, a Senior Software Engineer at Oracle.</p><p>My public work spans native Android experiences, Java desktop applications, Python utilities, and machine learning explorations. This collection brings those projects together, from database simulations to live notification systems.</p><p>I’ve also worked on collaborative coursework in document retrieval, movie recommendations, and reinforcement learning. Each project links back to its source, with collaboration and fork labels in the archive.</p><a class="quiet-link" href="https://github.com/kpranjal2047" target="_blank" rel="noopener noreferrer">Explore my GitHub profile <span aria-hidden="true">↗</span></a></div></div><div class="shell skill-strips"><span class="mono">IN THE REPOSITORIES</span><div><span>Kotlin</span><span>Java</span><span>Python</span><span>Android</span><span>JavaFX / Swing</span><span>Machine learning</span><span>Database systems</span></div></div></section>
+    <section class="contact shell section-space" id="contact"><div class="section-label"><span class="mono">05 / GET IN TOUCH</span><span class="mono">LET’S START A CONVERSATION</span></div><div class="contact-layout"><h2>Something in mind?<br><em>I’d like to hear it.</em></h2><a class="contact-circle" href="mailto:kpranjal2047@gmail.com" aria-label="Email Kumar Pranjal"><span aria-hidden="true">↗</span></a></div><div class="email-row"><a href="mailto:kpranjal2047@gmail.com">kpranjal2047@gmail.com</a><button type="button" id="copy-email">Copy email <span aria-hidden="true">⧉</span></button><span id="copy-status" class="sr-only" role="status"></span></div></section>
+  </main>
+  <footer class="shell"><a class="wordmark" href="#top" aria-label="Back to top"><span class="brand-symbol" aria-hidden="true">✳</span> pranjal.</a><span>© <span id="year">2026</span> Kumar Pranjal</span><div><a href="https://github.com/kpranjal2047" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:kpranjal2047@gmail.com">Email ↗</a><a href="#top">Back to top ↑</a></div></footer>
+</body>
 </html>
