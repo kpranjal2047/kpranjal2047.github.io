@@ -14,9 +14,11 @@ Open http://127.0.0.1:5173. Refresh after edits. Publish the repository root thr
 
 - `index.html`: page content, professional experience, education, contact details, and project highlights.
 - `styles.css`: theme tokens, responsive layouts, and the conceptual phone preview.
-- `app.js`: hash navigation, theme persistence, archive search/filter/sort, sample notification states, and copy-email behavior.
+- `app.js`: hash navigation, theme persistence, sample notification states, and copy-email behavior.
+- `github-repositories.mjs`: one-time GitHub loading, safe DOM rendering, archive search/filter/sort, dynamic counts, and cached fallback.
+- `github-data.mjs`: public repository API, pagination, normalization, curated-note merging, and validated local caching.
 - `data/projects.json`: reviewed repository summaries and source URLs.
-- `scripts/build.py`: regenerates the static archive between the repository markers in `index.html`. Run `python3 scripts/build.py` after changing repository data. If adding or removing repositories, update category counts and the snapshot date in the surrounding page.
+- `scripts/build.py`: regenerates the static archive between the repository markers in `index.html`. Run `python3 scripts/build.py` after changing repository data. The generated archive and embedded curation are the offline fallback. Live category counts and repository totals are recalculated automatically. Update the static fallback counts and snapshot date when refreshing the checked-in snapshot.
 - `assets/kumar-pranjal-resume.pdf`: the owner-provided résumé, used by the view/download links. Replace this file when updating the résumé, and reconcile the page content.
 
 ## Navigation and accessibility
@@ -29,6 +31,23 @@ The site includes a skip link, visible keyboard focus, active navigation labels,
 
 Professional experience, achievements, internships, technical skills, education, and contact details come from the owner-provided résumé, reviewed on 20 October 2026. The source PDF is included as an intentional public résumé asset. Approximate metrics retain their original qualifications; team results are described as contributions.
 
-All 19 publicly listed GitHub repositories were reviewed on 15 October 2026. Their landing pages and available READMEs informed the summaries; selected source/documentation was reviewed for Live Progress and AER Ad Bot. This is a dated snapshot, not a live GitHub connection. Private repositories are outside its scope. Collaborative coursework and the Coursera upstream fork are labeled. Sparsely documented repositories have limited descriptions. Dates describe repository updates, not completion dates.
+All 19 publicly listed GitHub repositories were reviewed on 15 October 2026. Their landing pages and available READMEs informed the summaries; selected source/documentation was reviewed for Live Progress and AER Ad Bot. The checked-in archive is a fallback snapshot. On every page load, the site requests the current public repository list from GitHub once (including pagination if needed). There are no polling timers, visibility/focus refreshes, retry loops, or manual refresh requests. Reloading the page starts a new load. Private repositories are outside its scope. Collaborative coursework and the Coursera upstream fork are labeled. Sparsely documented repositories have limited descriptions. Dates describe repository updates, not completion dates.
 
-The phone and notification preview are original HTML/CSS concepts using fixed sample data, not screenshots or a live connection to the Android application. No analytics, external fonts, GitHub API requests, or runtime dependencies are needed to render the portfolio.
+The phone and notification preview are original HTML/CSS concepts using fixed sample data, not screenshots or a live connection to the Android application. No analytics, external fonts, or runtime dependencies are needed. Live repository metadata is requested directly from the public GitHub REST API without authentication. No token or private-repository access is used.
+
+## Live repository loading
+
+`GET https://api.github.com/users/kpranjal2047/repos?type=owner&sort=updated&direction=desc&per_page=100&page=1` runs once per page load; further pages are fetched only as part of that initial operation. The entire list must load successfully before it replaces the current archive. The request operation times out after 20 seconds.
+
+Names, descriptions, language, topics, update dates, archived/fork state, stars, and forks come from GitHub. Curated titles, technical notes, collaboration labels, and categories are retained for known repositories. New public repositories appear automatically; repositories no longer in the public list disappear. Selected project cards keep their editorial descriptions, gain current metadata, and are hidden if their repository is no longer public. API descriptions are rendered as text rather than HTML.
+
+A validated localStorage cache displays immediately while that one request runs. If GitHub is unavailable or returns a rate-limit/access error, the cache or static fallback remains visible with an honest source/date status. Storage is optional; blocked or full storage does not prevent live loading. GitHub's unauthenticated API quota is shared by clients on the same public IP, so a page load is not guaranteed to obtain fresh data. See [GitHub rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).
+
+### Verify
+
+```sh
+node --test tests/github-data.test.mjs
+python3 scripts/build.py
+node --check app.js
+node --check github-repositories.mjs
+```

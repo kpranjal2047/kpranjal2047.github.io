@@ -47,52 +47,6 @@ themeButton.addEventListener('click', () => {
   try { localStorage.setItem('portfolio-theme', theme); } catch { /* Optional persistence. */ }
 });
 
-// The archive is rendered into HTML so every project is accessible without JS.
-const archive = document.querySelector('#repository-list');
-const rows = Array.from(archive.querySelectorAll('.repo-row'));
-const search = document.querySelector('#project-search');
-const sort = document.querySelector('#project-sort');
-const filters = Array.from(document.querySelectorAll('[data-filter]'));
-let selectedCategory = 'all';
-
-function updateArchive() {
-  const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  let visible = 0;
-  rows.forEach((row) => {
-    const categoryMatch = selectedCategory === 'all' || row.dataset.category === selectedCategory;
-    const searchMatch = terms.every((term) => row.dataset.search.includes(term));
-    row.hidden = !(categoryMatch && searchMatch);
-    if (!row.hidden) visible += 1;
-  });
-  document.querySelector('#result-count').textContent = `Showing ${visible} of ${rows.length} repositories`;
-  document.querySelector('#empty-state').hidden = visible !== 0;
-  filters.forEach((button) => {
-    const active = button.dataset.filter === selectedCategory;
-    button.classList.toggle('selected', active);
-    button.setAttribute('aria-pressed', String(active));
-  });
-}
-
-filters.forEach((button) => {
-  button.addEventListener('click', () => {
-    selectedCategory = button.dataset.filter;
-    updateArchive();
-  });
-});
-search.addEventListener('input', updateArchive);
-sort.addEventListener('change', () => {
-  const sorted = [...rows].sort((a, b) => sort.value === 'name'
-    ? a.dataset.name.localeCompare(b.dataset.name)
-    : b.dataset.updated.localeCompare(a.dataset.updated) || rows.indexOf(a) - rows.indexOf(b));
-  sorted.forEach((row) => archive.append(row));
-});
-document.querySelector('#reset-filters').addEventListener('click', () => {
-  search.value = '';
-  selectedCategory = 'all';
-  updateArchive();
-  search.focus();
-});
-
 // Fixed sample data illustrates the app's documented notification use cases.
 const demoStates = {
   progress: { pill: '↓ 68%', icon: '↓', source: 'Download manager', title: 'Almost there.', description: 'Your download is making progress.', detail: '680 MB of 1 GB', value: '68%', progress: '68%' },

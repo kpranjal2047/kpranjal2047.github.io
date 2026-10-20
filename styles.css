@@ -396,3 +396,12 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: va
   input[type='search'] { font-size: 16px; }
 }
 @media(prefers-reduced-motion:reduce) { *, *::before, *::after { transition: none !important; } }
+
+.github-status { font-size: 11px; line-height: 1.9; color: var(--muted); margin: -7px 0 20px; }
+.github-status[data-state='live'] { color: var(--accent); }
+.repository-stats { font: 10px/1.8 var(--mono); color: var(--muted); margin-top: 12px; }
+.project-live-meta { font: 10px/1.8 var(--mono); color: var(--muted); margin-top: 18px; overflow-wrap: anywhere; }
+.feature-copy>.project-live-meta { font-size: 10px; }
+
+.repo-name, .repo-summary, .repo-details>p, .tag-list>span { overflow-wrap: anywhere; }
+.tag-list>span { max-width: 100%; }

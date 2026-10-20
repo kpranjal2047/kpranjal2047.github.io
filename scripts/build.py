@@ -14,7 +14,7 @@ for i, p in enumerate(projects, 1):
     keywords = escape(' '.join([p['title'], p['slug'], p['summary'], p['category'], p['language'], p['kind'], *p['technologies']]).lower(), quote=True)
     tags = ''.join(f'<span>{escape(t)}</span>' for t in p['technologies'])
     short_date = date.fromisoformat(p['updated']).strftime('%b %Y')
-    rows.append(f'''  <details class="repo-row" data-category="{e('category')}" data-name="{e('title')}" data-updated="{e('updated')}" data-search="{keywords}">
+    rows.append(f'''  <details class="repo-row" data-slug="{e('slug')}" data-category="{e('category')}" data-name="{e('title')}" data-updated="{e('updated')}" data-search="{keywords}">
     <summary><span class="repo-main"><span class="repo-number">{i:02}</span><span><span class="repo-name">{e('title')}</span><span class="repo-summary">{e('summary')}</span><span class="repo-kind">{e('kind')}</span></span></span><span class="repo-language"><i class="language-dot {e('language').split()[0].lower()}"></i>{e('language')}</span><time datetime="{e('updated')}">{short_date}</time><span class="expand-icon" aria-hidden="true">+</span></summary>
     <div class="repo-details"><p>{e('details')}</p><div class="repo-detail-footer"><div class="tag-list">{tags}</div><a href="{e('url')}" target="_blank" rel="noopener noreferrer">View {e('slug')} on GitHub <span aria-hidden="true">↗</span></a></div></div>
   </details>''')
@@ -23,5 +23,12 @@ text = page.read_text()
 start, end = '<!-- REPOSITORIES:START -->', '<!-- REPOSITORIES:END -->'
 before, remainder = text.split(start)
 _, after = remainder.split(end)
-page.write_text(before + start + '\n' + '\n'.join(rows) + '\n' + end + after)
+text = before + start + '\n' + '\n'.join(rows) + '\n' + end + after
+# Embedded public curation avoids an extra request and is available offline.
+start, end = '<!-- CURATION:START -->', '<!-- CURATION:END -->'
+before, remainder = text.split(start)
+_, after = remainder.split(end)
+payload = json.dumps({'projects': projects}, ensure_ascii=True).replace('<', '\\u003c')
+text = before + start + '\n<script type="application/json" id="repository-curation">' + payload + '</script>\n' + end + after
+page.write_text(text)
 print(f'Rendered {len(projects)} repositories into index.html')
