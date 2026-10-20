@@ -1,31 +1,34 @@
-# Kumar Pranjal — Portfolio
+# Kumar Pranjal — Engineering Studio
 
-A fresh, dependency-free static portfolio for Kumar Pranjal, Senior Software Engineer at Oracle.
+A dependency-free, responsive portfolio for Kumar Pranjal, Senior Application Software Engineer at Oracle. The selected Engineering Studio design includes Overview, Experience, Projects, and About & contact, with a dark default theme and a persistent light/dark switch.
 
-## Local preview
+## Preview
 
 ```sh
 python3 -m http.server 5173 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:5173. Refresh after edits. Publish the repository root through GitHub Pages; no package installation or build service is needed.
+Open http://127.0.0.1:5173. Refresh after edits. Publish the repository root through GitHub Pages; no package installation is required.
 
-## Files
+## Edit
 
-- `index.html` — complete page and pre-rendered repository archive.
-- `styles.css` — responsive layouts and project concept illustrations.
-- `app.js` — archive search, filters, sorting, notification concept demo, and copy-email interaction.
-- `data/projects.json` — reviewed repository summaries and source URLs.
-- `scripts/build.py` — updates the archive HTML from the JSON file. Run `python3 scripts/build.py` after changing repository data. Update category counts and snapshot date in the surrounding page if the repository list changes.
+- `index.html`: page content, professional experience, education, contact details, and project highlights.
+- `styles.css`: theme tokens, responsive layouts, and the conceptual phone preview.
+- `app.js`: hash navigation, theme persistence, archive search/filter/sort, sample notification states, and copy-email behavior.
+- `data/projects.json`: reviewed repository summaries and source URLs.
+- `scripts/build.py`: regenerates the static archive between the repository markers in `index.html`. Run `python3 scripts/build.py` after changing repository data. If adding or removing repositories, update category counts and the snapshot date in the surrounding page.
+- `assets/kumar-pranjal-resume.pdf`: the owner-provided résumé, used by the view/download links. Replace this file when updating the résumé, and reconcile the page content.
 
-## Content provenance
+## Navigation and accessibility
 
-All 19 repositories publicly listed at https://github.com/kpranjal2047?tab=repositories were reviewed on 15 October 2026. Repository landing pages and available READMEs informed the summaries. Selected supporting documents/source were inspected for Live Progress and AER Ad Bot.
+The sections use native anchor links with shareable URLs (`#overview`, `#experience`, `#projects`, `#about`, and `#archive`). Browser Back/Forward restores the selected section. Without JavaScript, all sections and repository details remain available. Native disclosure elements expose the full repository archive and individual project details. Search, filters, sorting, the notification concept, and copy-email require JavaScript.
 
-The owner's role (Senior Software Engineer at Oracle) and contact email were supplied directly. No claims about Oracle responsibilities, experience duration, availability for employment, or education are made. Private repositories are outside this snapshot.
+The site includes a skip link, visible keyboard focus, active navigation labels, live announcements for filtering and clipboard results, reduced-motion support, and layouts for mobile and desktop. Theme preference is stored locally when browser storage is available. The default matches the approved dark Engineering Studio design.
 
-Collaborative coursework and the Coursera upstream fork are explicitly identified. Repositories without documentation have deliberately limited descriptions. Dates describe repository updates, not employment history or project completion dates. The website repository's displayed language and update date reflect the public GitHub snapshot before this local rebuild.
+## Content sources
 
-The notification preview and project artwork are original HTML/CSS concepts with illustrative data, not screenshots or live connections to the underlying applications. No GitHub API requests, analytics, external fonts, third-party assets, or runtime dependencies are needed to render the site. Refresh the snapshot manually to keep it current.
+Professional experience, achievements, internships, technical skills, education, and contact details come from the owner-provided résumé, reviewed on 20 October 2026. The source PDF is included as an intentional public résumé asset. Approximate metrics retain their original qualifications; team results are described as contributions.
 
-The previous compiled application, original images, résumé and social links were removed as part of the rebuild.
+All 19 publicly listed GitHub repositories were reviewed on 15 October 2026. Their landing pages and available READMEs informed the summaries; selected source/documentation was reviewed for Live Progress and AER Ad Bot. This is a dated snapshot, not a live GitHub connection. Private repositories are outside its scope. Collaborative coursework and the Coursera upstream fork are labeled. Sparsely documented repositories have limited descriptions. Dates describe repository updates, not completion dates.
+
+The phone and notification preview are original HTML/CSS concepts using fixed sample data, not screenshots or a live connection to the Android application. No analytics, external fonts, GitHub API requests, or runtime dependencies are needed to render the portfolio.

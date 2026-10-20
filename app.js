@@ -1,5 +1,52 @@
 'use strict';
 
+// Native links and visible sections work without JavaScript. Enhance them into
+// the selected Engineering Studio navigation, with shareable hash URLs.
+const sections = Array.from(document.querySelectorAll('.page-panel'));
+const navigation = Array.from(document.querySelectorAll('.section-nav a'));
+const pageTitles = { overview: 'Software Engineer', experience: 'Experience', projects: 'Projects', about: 'About & Contact' };
+function showSection() {
+  const requested = window.location.hash.slice(1);
+  const active = requested === 'main' ? (sections.find(section => !section.hidden)?.id || 'overview') : requested === 'archive' ? 'projects' : sections.some(section => section.id === requested) ? requested : 'overview';
+  // Preserve the skip link's native focus/scroll behavior.
+  sections.forEach(section => { section.hidden = section.id !== active; });
+  navigation.forEach(link => {
+    if (link.hash === `#${active}`) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+  if (requested === 'archive') document.querySelector('#archive').open = true;
+  document.title = `Kumar Pranjal — ${pageTitles[active]}`;
+  if (requested === 'archive') document.querySelector('#archive').scrollIntoView();
+  else if (requested !== 'main') window.scrollTo(0, 0);
+}
+document.documentElement.classList.add('js-ready');
+showSection();
+window.addEventListener('hashchange', showSection);
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  if (!sections.some(section => link.hash === `#${section.id}`)) return;
+  link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (window.location.hash !== link.hash) history.pushState(null, '', link.hash);
+    showSection();
+  });
+});
+
+const themeButton = document.querySelector('#theme-toggle');
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const dark = theme === 'dark';
+  themeButton.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
+  themeButton.firstElementChild.textContent = dark ? '☼' : '☾';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#0b141c' : '#f3f6f5';
+}
+applyTheme(document.documentElement.dataset.theme);
+themeButton.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(theme);
+  try { localStorage.setItem('portfolio-theme', theme); } catch { /* Optional persistence. */ }
+});
+
 // The archive is rendered into HTML so every project is accessible without JS.
 const archive = document.querySelector('#repository-list');
 const rows = Array.from(archive.querySelectorAll('.repo-row'));
